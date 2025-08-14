@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>متجري — صفحة رئيسية دلالية بتخطيط CSS</title>
+  <meta name="description" content="صفحة رئيسية منظمة باستخدام دلالات HTML وتخطيط CSS (Grid/Flex) مع تأثيرات انتقالية خفيفة وتجربة استخدام مريحة." />
+  <meta name="theme-color" content="#0ea5e9" />
+  <!-- أيقونات اجتماعية ومحركات بحث -->
+  <meta property="og:title" content="متجري — صفحة رئيسية" />
+  <meta property="og:description" content="صفحة رئيسية دلالية بتخطيط عصري وتأثيرات CSS خفيفة." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="stylesheet.css"> <!--linking the css file-->
+</head>
+<body>
+  <header>
+    <div class="container nav" role="navigation" aria-label="التنقل الرئيسي">
+      <a class="brand" href="#" aria-label="الرئيسية">
+        <span class="brand__logo floating" aria-hidden="true"></span>
+        <span class="brand__name">متجري</span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="#promos">العروض</a></li>
+          <li><a href="#features">المزايا</a></li>
+          <li><a href="#testimonials">آراء العملاء</a></li>
+          <li><a class="cta" href="#newsletter">اشترك الآن</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero__grid">
+        <div>
+          <h1 id="hero-title">كل ما تحتاجه لبدء متجرك الإلكتروني بسهولة</h1>
+          <p>تصميم حديث، سرعة عالية، وتجربة استخدام مريحة—ابدأ الآن ببضع نقرات فقط.</p>
+          <div class="hero__actions">
+            <a class="btn-primary" href="#promos">تسوق العروض</a>
+            <a class="btn-ghost" href="#features">تعرّف على المزايا</a>
+          </div>
+          <div class="metrics" aria-label="إحصاءات">
+            <div class="metric"><strong>+1.2k</strong><span>منتج متاح</span></div>
+            <div class="metric"><strong>98%</strong><span>رضا العملاء</span></div>
+            <div class="metric"><strong>24/7</strong><span>دعم فني</span></div>
+          </div>
+        </div>
+        <aside class="hero__card" aria-label="بطاقة إبراز">
+          <figure class="card__media" aria-hidden="true">
+            <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="currentColor" />
+                  <stop offset="100%" stop-color="currentColor" />
+                </linearGradient>
+              </defs>
+              <rect x="10" y="20" width="100" height="70" rx="12" stroke="currentColor" opacity=".4"></rect>
+              <circle cx="35" cy="55" r="16" fill="currentColor" opacity=".25" />
+              <rect x="60" y="40" width="40" height="8" rx="4" fill="currentColor" opacity=".25" />
+              <rect x="60" y="55" width="40" height="8" rx="4" fill="currentColor" opacity=".25" />
+              <rect x="60" y="70" width="28" height="8" rx="4" fill="currentColor" opacity=".25" />
+            </svg>
+          </figure>
+          <figcaption style="color: var(--clr-muted);">قالب واجهات جاهز للتخصيص — خفيف وسريع الاستجابة.</figcaption>
+        </aside>
+      </div>
+    </section>
+    <section id="promos" class="promos container" aria-labelledby="promos-title">
+      <div class="section-head">
+        <h2 id="promos-title">عروض مميزة</h2>
+        <a class="cta" href="#" aria-label="عرض جميع العروض">عرض الكل</a>
+      </div>
+      <div class="grid">
+        <article class="card" aria-labelledby="p1-title">
+          <div class="card__media" aria-hidden="true"><img src="41fdbebd-bebf-4f80-bde0-2bdb4dad8986.avif"></div>
+          <div class="card__body">
+            <span class="tag" aria-hidden="true">خصم %30</span>
+            <h3 id="p1-title">سماعات لاسلكية</h3>
+            <p class="price">899 جنيه</p>
+          </div>
+        </article>
+        <article class="card" aria-labelledby="p2-title">
+          <div class="card__media" aria-hidden="true"><img src="Z10-3rd-700x700-3.webp"></div>
+          <div class="card__body">
+            <span class="tag" aria-hidden="true">الأكثر مبيعًا</span>
+            <h3 id="p2-title">ساعة ذكية</h3>
+            <p class="price">1499 جنيه</p>
+          </div>
+        </article>
+        <article class="card" aria-labelledby="p3-title">
+          <div class="card__media" aria-hidden="true"><img src="61hkQs48i6L.jpg"></div>
+          <div class="card__body">
+            <span class="tag" aria-hidden="true">جديد</span>
+            <h3 id="p3-title">كاميرا أكشن 4K</h3>
+            <p class="price">2799 جنيه</p>
+          </div>
+        </article>
+      </div>
+    </section>
+    <!-- المزايا -->
+    <section id="features" class="features container" aria-labelledby="features-title">
+      <h2 id="features-title" style="margin-bottom: 1rem;">لماذا نحن؟</h2>
+      <div class="grid">
+        <article>
+          <h3>توصيل سريع</h3>
+          <p>نشحن خلال 24–48 ساعة داخل معظم المحافظات مع تتبع مباشر.</p>
+        </article>
+        <article>
+          <h3>دفع آمن</h3>
+          <p>بوابات دفع موثوقة وتشفير كامل لحمايتك.</p>
+        </article>
+        <article>
+          <h3>إرجاع سهل</h3>
+          <p>سياسة استرجاع خلال 14 يومًا—بلا تعقيد.</p>
+        </article>
+        <article>
+          <h3>دعم دائم</h3>
+          <p>فريق دعم يجيبك على مدار الساعة بكل ود.</p>
+        </article>
+      </div>
+    </section>
+    <!-- آراء العملاء -->
+    <section id="testimonials" class="testimonials container" aria-labelledby="testimonials-title">
+      <h2 id="testimonials-title" style="margin-bottom: 1rem;">ماذا يقول عملاؤنا</h2>
+      <div class="grid">
+        <blockquote class="quote">
+          <p>"تصميم أنيق وتجربة شراء سلسة جدًا. بالتأكيد سأكرر الشراء."</p>
+          <footer>— سارة ع.</footer>
+        </blockquote>
+        <blockquote class="quote">
+          <p>"جودة المنتجات ممتازة وخدمة العملاء احترافية للغاية."</p>
+          <footer>— محمد ن.</footer>
+        </blockquote>
+      </div>
+    </section>
+    <!-- نشرة بريدية: تفاعل فعال -->
+    <section id="newsletter" class="newsletter" aria-labelledby="newsletter-title">
+      <div class="container">
+        <h2 id="newsletter-title" style="margin-top: 0;">انضم إلى نشرتنا البريدية</h2>
+        <p style="color: var(--clr-muted); margin-bottom: 1rem;">عروض حصرية وتحديثات أسبوعية مباشرة إلى بريدك.</p>
+        <form aria-label="اشترك في النشرة" onsubmit="event.preventDefault(); this.reset(); alert('شكرًا لاشتراكك!');">
+          <label class="sr-only" for="email">البريد الإلكتروني</label>
+          <input id="email" type="email" name="email" placeholder="example@email.com" required />
+          <button type="submit" aria-label="اشترك">اشترك</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container footer-grid" aria-labelledby="footer-title">
+      <section>
+        <h3 id="footer-title">متجري</h3>
+        <p>منصة تسوق بخبرة تصميم واهتمام بالتفاصيل.</p>
+      </section>
+      <section>
+        <h3>روابط</h3>
+        <ul>
+          <li><a href="#">الأسئلة الشائعة</a></li>
+          <li><a href="#">سياسة الخصوصية</a></li>
+          <li><a href="#">الشروط والأحكام</a></li>
+        </ul>
+      </section>
+      <section>
+        <h3>تواصل</h3>
+        <ul>
+          <li><a href="mailto:support@example.com">support@example.com</a></li>
+          <li><a href="#">(+20)xxxxxxxxx</a></li>
+        </ul>
+      </section>
+      <section>
+        <h3>تابعنا</h3>
+        <ul>
+          <li><a href="#">X</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+      </section>
+    </div>
+    <div class="container" style="margin-top: 1rem; font-size: .9rem;">© <span id="year"></span> متجري. جميع الحقوق محفوظة.</div>
+  </footer>
+</body>
+</html>
